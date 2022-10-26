@@ -21,4 +21,11 @@ public class Author {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+    public String toString(){
+        return " Автор"+ " " +name+" "+surname;
+    }
+    public boolean equals(Author author){
+       return getName().equals(author.getName())&& getSurname().equals(author.getSurname());
+
+    }
 }
