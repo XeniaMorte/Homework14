@@ -3,7 +3,6 @@ public class Book {
     Author author;
     Integer yearPuplication;
 
-
     public Book (String name,Author author,Integer yearPuplication){
         this.author=author;
         this.yearPuplication=yearPuplication;
@@ -33,6 +32,7 @@ public class Book {
     public Integer getYearPuplication() {
         return yearPuplication;
     }
+
     @Override
     public String toString(){
         return "Book: {name: " + name + ", yearPuplication: "+ yearPuplication +"}"+" "+author;
