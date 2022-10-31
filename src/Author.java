@@ -1,9 +1,10 @@
 public class Author {
     String name;
     String surname;
-    public  Author(String name, String surname){
-        this.name=name;
-        this.surname=surname;
+
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
     public void setName(String name) {
@@ -22,11 +23,21 @@ public class Author {
         this.surname = surname;
     }
 
-    public String toString(){
-        return " Автор"+ " " +name+" "+surname;
+    public String toString() {
+        return " Автор" + " " + name + " " + surname;
     }
-    public boolean equals(Author author){
-       return getName().equals(author.getName())&& getSurname().equals(author.getSurname());
 
+    public boolean equals(Author author) {
+        return author != null &&
+                getName().equals(author.getName()) &&
+                getSurname().equals(author.getSurname());
+
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null &&
+                obj.getClass() == this.getClass() &&
+                this == obj;
     }
 }
